@@ -22,7 +22,8 @@ let page;
 let awaitingOtpFromChatId;
 
 const INE_DIR = './ine_uploads/';
-await fs.mkdir(INE_DIR, { recursive: true });
+
+fs.mkdir(INE_DIR, { recursive: true }).catch(console.error);
 
 // --- TELEGRAM BOT ---
 const bot = new Telegraf(process.env.TELEGRAM_TOKEN);
