@@ -271,10 +271,10 @@ app.get('/',(req,res)=>res.send("<h1>TeleGOD is alive 😈</h1>"));
 
 // Set Webhook on Railway or use polling locally
 if(process.env.RAILWAY_PUBLIC_DOMAIN){
-   bot.telegram.setWebhook(`https://${process.env.RAILWAY_PUBLIC_DOMAIN}/webhook`);
+   bot.telegram.setWebhook('https://${process.env.RAILWAY_PUBLIC_DOMAIN}/webhook');
 }else{
    bot.startPolling();
    app.listen(process.env.PORT || 3k);
-   console.log(`🚀 Local server running on http://localhost:${process.env.PORT || 3k}`);
+   console.log('🚀 Local server running on http://localhost:${process.env.PORT || 3k}');
 }
 ```
