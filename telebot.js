@@ -274,7 +274,7 @@ if(process.env.RAILWAY_PUBLIC_DOMAIN){
    bot.telegram.setWebhook('https://${process.env.RAILWAY_PUBLIC_DOMAIN}/webhook');
 }else{
    bot.startPolling();
-   app.listen(process.env.PORT || 3k);
-   console.log('🚀 Local server running on http://localhost:${process.env.PORT || 3k}');
+   app.listen(process.env.PORT || 3000);
+   console.log('🚀 Local server running on http://localhost:${process.env.PORT || 3000}');
 }
 ```
