@@ -175,9 +175,9 @@ async function startAutomation(chatId) {
                let b64=(await fs.readFile(path)).toString("base64");
                let mime=path.endsWith(".png")?"image/png":"image/jpeg";
                
-               b64=`data:${mime};base64,${b64}`;
+               b64='data:${mime};base64,${b64}';
 
-               console.log(`Injecting into ${sel}`);
+               console.log('Injecting into ${sel}');
 
                await page.evaluate(async(sel,bData,fname)=>{
 
