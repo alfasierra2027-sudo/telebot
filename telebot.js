@@ -38,7 +38,10 @@ bot.on('document', async (ctx) => {
 
     try {
         const fileLink = await ctx.telegram.getFileLink(file_id);
-        const filePath = path.join(INE_DIR, `${file_name.split('?')[0]}`);
+        const filePath = path.join(
+    INE_DIR,
+    file_name.split('?')[0]
+);
         
         // Download file
         const response = await fetch(fileLink.href);
