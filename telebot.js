@@ -111,7 +111,9 @@ async function startAutomation(chatId) {
 
 	  page.setDefaultTimeout(60000);
 	  
-	  page.on("console",msg=>console.log('[PAGE] ${msg.text()}'));
+	  page.on('console', (message) => {
+    console.log('[PAGE]', message.text());
+});
 
       // Override navigator.mediaDevices.getUserMedia to fake liveness stream
       // This part is injected BEFORE navigating to avoid detection
