@@ -1,10 +1,17 @@
 {
   "name": "telebot",
   "version": "1.0.0",
-  "description": "Telegram bot",
+  "description": "Bot de Telegram desplegado en Railway",
   "main": "telebot.js",
   "scripts": {
     "start": "node telebot.js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "telegraf": "^4.16.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
 }
