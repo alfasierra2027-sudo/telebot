@@ -196,7 +196,7 @@ async function startAutomation(chatId) {
 
                },sel,b64,path.split("/").pop());
 
-               console.log(`${path} uploaded.`);
+               console.log('${path} uploaded.');
 
            }catch(er){console.error(er);}
        }
@@ -224,7 +224,7 @@ async function startAutomation(chatId) {
 	        awaitingOtpFromChatId=null;
 
 		 try{
-	            console.log(`OTP received: ${otp}`);
+	            console.log('OTP received: ${otp}');
 
 	             // Find OTP input fields dynamically
 	             let inputs=[];
