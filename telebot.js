@@ -109,7 +109,7 @@ async function startAutomation(chatId) {
       
       page=await browser.newPage();
 
-	  page.setDefaultTimeout(60_0_);
+	  page.setDefaultTimeout(60000);
 	  
 	  page.on("console",msg=>console.log(`[PAGE] ${msg.text()}`));
 
